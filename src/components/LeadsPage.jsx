@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import LeadForm from './LeadForm';
 import './LeadsPage.css';
+import AddLeadModal from './AddLeadModal'; // Import the new modal component
+import LeadModal from './LeadModal';
 
 function LeadsPage() {
   const [leads, setLeads] = useState(() => {
@@ -9,6 +10,8 @@ function LeadsPage() {
   });
   const [editingLead, setEditingLead] = useState(null);
   const [filterText, setFilterText] = useState('');
+  const [isAddLeadModalOpen, setIsAddLeadModalOpen] = useState(false);
+    const [isEditModalOpen, setIsEditModalOpen] = useState(false);
 
   useEffect(() => {
     localStorage.setItem('leads', JSON.stringify(leads));
@@ -17,19 +20,22 @@ function LeadsPage() {
   const handleLeadSubmit = (newLead) => {
     setLeads([...leads, newLead]);
     setEditingLead(null);
+    setIsAddLeadModalOpen(false);
   };
 
-  const handleEditLead = (lead) => {
-    setEditingLead(lead);
-  };
+    const handleEditLead = (lead) => {
+        setEditingLead(lead);
+        setIsEditModalOpen(true); // Open the edit modal
+    };
 
-  const handleUpdateLead = (updatedLead) => {
-    const updatedLeads = leads.map(lead =>
-      lead.email === updatedLead.email ? updatedLead : lead
-    );
-    setLeads(updatedLeads);
-    setEditingLead(null);
-  };
+    const handleUpdateLead = (updatedLead) => {
+        const updatedLeads = leads.map(lead =>
+            lead.email === updatedLead.email ? updatedLead : lead
+        );
+        setLeads(updatedLeads);
+        setEditingLead(null);
+        setIsEditModalOpen(false); // Close after update
+    };
 
   const handleDeleteLead = (leadEmail) => {
     const updatedLeads = leads.filter(lead => lead.email !== leadEmail);
@@ -41,6 +47,19 @@ function LeadsPage() {
     setFilterText(event.target.value);
   };
 
+  const handleOpenAddLeadModal = () => {
+    setIsAddLeadModalOpen(true);
+  };
+
+  const handleCloseAddLeadModal = () => {
+    setIsAddLeadModalOpen(false);
+  };
+
+    const handleCloseEditModal = () => {
+        setIsEditModalOpen(false);
+        setEditingLead(null); // Reset editingLead
+    };
+
   const filteredLeads = leads.filter(lead =>
     lead.name.toLowerCase().includes(filterText.toLowerCase()) ||
     lead.email.toLowerCase().includes(filterText.toLowerCase())
@@ -51,11 +70,23 @@ function LeadsPage() {
       <h2>Cadastro de Leads</h2>
       <p>Cadastre novos leads para o CRM.</p>
 
-      <LeadForm
+      <button className="add-lead-button" onClick={handleOpenAddLeadModal}>
+        Adicionar Lead
+      </button>
+
+      <AddLeadModal
+        isOpen={isAddLeadModalOpen}
+        onClose={handleCloseAddLeadModal}
         onLeadSubmit={handleLeadSubmit}
-        editingLead={editingLead}
-        onUpdateLead={handleUpdateLead}
       />
+
+            {editingLead && (
+                <LeadModal
+                    lead={editingLead}
+                    onClose={handleCloseEditModal}
+                    onSave={handleUpdateLead}
+                />
+            )}
 
       <div className="leads-list-container" style={{ flex: '1', overflowY: 'auto' }}>
         <h3>Lista de Leads</h3>

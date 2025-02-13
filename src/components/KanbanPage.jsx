@@ -12,7 +12,6 @@ function KanbanPage() {
   const [selectedSector, setSelectedSector] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedLead, setSelectedLead] = useState(null);
-  const [isAddLeadModalOpen, setIsAddLeadModalOpen] = useState(false);
   const [isImportModalOpen, setIsImportModalOpen] = useState(false);
 
   useEffect(() => {
@@ -40,20 +39,6 @@ function KanbanPage() {
     setLeads(updatedLeads);
     localStorage.setItem('leads', JSON.stringify(updatedLeads));
     handleCloseModal();
-  };
-
-  // Functions for Add Lead Modal
-  const handleOpenAddLeadModal = () => {
-    setIsAddLeadModalOpen(true);
-  };
-
-  const handleCloseAddLeadModal = () => {
-    setIsAddLeadModalOpen(false);
-  };
-
-  const handleAddLeadSubmit = (newLead) => {
-    setLeads([...leads, newLead]);
-    setIsAddLeadModalOpen(false);
   };
 
   // Functions for Import Modal
@@ -169,9 +154,7 @@ function KanbanPage() {
           </div>
         </div>
         <div>
-          <button className="add-lead-button" onClick={handleOpenAddLeadModal}>
-            Adicionar Lead
-          </button>
+          {/* Removed Add Lead Button */}
           <button className="import-lead-button" onClick={handleOpenImportModal}>
             Importar Leads (CSV)
           </button>
@@ -189,18 +172,6 @@ function KanbanPage() {
           onClose={handleCloseModal}
           onSave={handleSaveModal}
         />
-      )}
-
-      {isAddLeadModalOpen && (
-        <div className="add-lead-modal-overlay">
-          <div className="add-lead-modal-content">
-            <h3>Adicionar Novo Lead</h3>
-            <LeadForm onLeadSubmit={handleAddLeadSubmit} />
-            <button className="close-add-lead-modal-button" onClick={handleCloseAddLeadModal}>
-              Cancelar
-            </button>
-          </div>
-        </div>
       )}
 
       {isImportModalOpen && (

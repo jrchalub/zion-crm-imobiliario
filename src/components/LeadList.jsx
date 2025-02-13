@@ -1,7 +1,7 @@
 import React from 'react';
 import './LeadList.css';
 
-function LeadList({ leads, onConvertLeadToClient }) {
+function LeadList({ leads, onConvertLeadToClient, onEditLead }) {
   return (
     <div className="lead-list-container">
       <h2>Lista de Leads</h2>
@@ -26,6 +26,9 @@ function LeadList({ leads, onConvertLeadToClient }) {
                   onClick={() => onConvertLeadToClient(lead)}
                 >
                   Converter para Cliente
+                </button>
+                                <button className="edit-button" onClick={() => onEditLead(lead)}>
+                    Editar
                 </button>
               </div>
             </li>

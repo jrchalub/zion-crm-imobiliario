@@ -1,17 +1,18 @@
 .lead-form-container {
   background-color: #fff;
-  padding: 40px;
+  /* padding: 40px;  Removed padding to be controlled by parent */
   border-radius: 15px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07); /* Sombra mais suave */
+  /* box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07); Removed shadow to be controlled by parent */
   margin-bottom: 30px;
   border: none;
+  width: 100%; /* Ensure full width within its container */
 }
 
 .lead-form-container h2 {
   margin-top: 0;
   margin-bottom: 35px;
   color: #343a40;
-  font-size: 2.3em; /* Título maior */
+  font-size: 2.3em;
   text-align: center;
   font-weight: 700;
   letter-spacing: -0.5px;
@@ -37,15 +38,15 @@
 .form-group input,
 .form-group select,
 .form-group textarea {
-  padding: 14px 18px; /* Padding maior */
+  padding: 14px 18px;
   border: 1px solid #ced4da;
-  border-radius: 10px; /* Mais arredondado */
+  border-radius: 10px;
   font-size: 1em;
   width: 100%;
   box-sizing: border-box;
   color: #495057;
   transition: border-color 0.3s, box-shadow 0.3s;
-  background-color: #f8f9fa; /* Fundo levemente acinzentado */
+  background-color: #f8f9fa;
 }
 
 .form-group textarea {
@@ -58,7 +59,7 @@
   border-color: #007bff;
   box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
   outline: none;
-  background-color: #fff; /* Fundo branco no foco */
+  background-color: #fff;
 }
 
 .form-group select {
@@ -69,23 +70,42 @@
   background-repeat: no-repeat;
   background-position-x: 98%;
   background-position-y: center;
-  padding-right: 30px; /* Mais espaço para a seta */
+  padding-right: 30px;
+}
+
+/* Added styles for required field indication */
+.form-group input:required:not(:placeholder-shown):invalid,
+.form-group select:required:not(:placeholder-shown):invalid {
+  border-color: #dc3545;
+}
+
+.form-group input:required:not(:placeholder-shown):valid,
+.form-group select:required:not(:placeholder-shown):valid {
+    border-color: #28a745;
+}
+
+.form-group input::placeholder,
+.form-group select::placeholder,
+.form-group textarea::placeholder {
+  color: #999;
 }
 
 .submit-button {
-  padding: 14px 20px; /* Padding maior */
+  padding: 14px 20px;
   border: none;
-  border-radius: 10px; /* Mais arredondado */
+  border-radius: 10px;
   background-color: #007bff;
   color: white;
-  font-size: 1.2em; /* Fonte maior */
+  font-size: 1.2em;
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-weight: 600;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 15px; /* Consistent spacing */
+  width: 100%; /* Full width button */
 }
 
 .submit-button:hover {
   background-color: #0056b3;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada no hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }

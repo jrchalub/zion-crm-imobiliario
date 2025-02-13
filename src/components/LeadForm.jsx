@@ -68,15 +68,15 @@ function LeadForm({ onLeadSubmit, editingLead, onUpdateLead }) {
         {/* Campos do formulário (como antes) */}
         <div className="form-group">
           <label htmlFor="name">Nome:</label>
-          <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} required />
+          <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} required placeholder="Nome Completo" />
         </div>
         <div className="form-group">
           <label htmlFor="phone">Telefone:</label>
-          <input type="tel" id="phone" value={phone} onChange={(e) => setPhone(e.target.value)} />
+          <input type="tel" id="phone" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="(XX) XXXXX-XXXX" />
         </div>
         <div className="form-group">
           <label htmlFor="email">Email:</label>
-          <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+          <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} required placeholder="email@example.com" />
         </div>
         <div className="form-group">
           <label htmlFor="source">Origem do Lead:</label>
@@ -90,11 +90,11 @@ function LeadForm({ onLeadSubmit, editingLead, onUpdateLead }) {
         </div>
         <div className="form-group">
           <label htmlFor="ticketValue">Valor do Ticket (R$):</label>
-          <input type="number" id="ticketValue" value={ticketValue} onChange={(e) => setTicketValue(e.target.value)} step="0.01" />
+          <input type="number" id="ticketValue" value={ticketValue} onChange={(e) => setTicketValue(e.target.value)} step="0.01" placeholder="0.00" />
         </div>
         <div className="form-group">
           <label htmlFor="conversionTime">Tempo Médio de Conversão (dias):</label>
-          <input type="number" id="conversionTime" value={conversionTime} onChange={(e) => setConversionTime(e.target.value)} />
+          <input type="number" id="conversionTime" value={conversionTime} onChange={(e) => setConversionTime(e.target.value)} placeholder="0" />
         </div>
         <div className="form-group">
           <label htmlFor="stage">Estágio do Funil de Vendas:</label>
