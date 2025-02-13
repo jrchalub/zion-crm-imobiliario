@@ -1,0 +1,99 @@
+.property-form-container {
+    background-color: #fff;
+    /* padding: 40px; Removido para que o padding seja controlado pelo container pai */
+    border-radius: 15px;
+    /* box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07); Removido para que a sombra seja controlada pelo container pai */
+    margin-bottom: 30px;
+    border: none;
+  }
+  
+  .property-form-container h2 {
+    margin-top: 0;
+    margin-bottom: 35px;
+    color: #343a40;
+    font-size: 2.3em;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+  
+  .property-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Duas colunas */
+  .form-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas de igual largura */
+    gap: 30px; /* Espaçamento entre as colunas */
+  }
+  
+  .form-group {
+    margin-bottom: 25px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 10px;
+    color: #555;
+    font-weight: 600;
+    font-size: 1.1em;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 14px 18px;
+    border: 1px solid #ced4da;
+    border-radius: 10px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    color: #495057;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: #f8f9fa;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    outline: none;
+    background-color: #fff;
+  }
+  
+  .form-group select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position-x: 98%;
+    background-position-y: center;
+    padding-right: 30px;
+  }
+  
+  .submit-button {
+    padding: 14px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 15px; /* Espaço acima do botão */
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }

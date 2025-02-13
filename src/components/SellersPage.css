@@ -1,0 +1,17 @@
+.sellers-page-content {
+  padding: 30px;
+}
+
+.sellers-page-content h2 {
+  color: #34495e;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-align: center; /* Center the page title */
+}
+
+.sellers-page-content p {
+  color: #777;
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  text-align: center; /* Center the page description */
+}

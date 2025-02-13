@@ -1,0 +1,98 @@
+.client-portfolio-page-content {
+  padding: 30px;
+}
+
+.client-portfolio-page-content h2 {
+  color: #30475E;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.client-portfolio-page-content p {
+  color: #555;
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.client-portfolio-section {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eee;
+  margin-top: 30px;
+}
+
+.client-portfolio-section h3 {
+  color: #30475E;
+  font-size: 1.8em;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Estilos para Leads Sem Dono */
+.unassigned-section h3 {
+  color: #F05454; /* Destaque para a seção de leads sem dono */
+}
+
+.unassigned-lead-list {
+  list-style: none;
+  padding: 0;
+}
+
+.unassigned-lead-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.unassigned-lead-item:last-child {
+  border-bottom: none;
+}
+
+.unassigned-lead-item .lead-info p {
+  margin: 5px 0;
+}
+
+.add-to-portfolio-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.add-to-portfolio-button:hover {
+  background-color: #218838;
+}
+
+
+/* Estilos para Meus Leads (Leads na Carteira) */
+.my-leads-section h3 {
+  color: #3498db; /* Cor diferente para a seção "Meus Leads" */
+}
+
+.portfolio-lead-list {
+  list-style: none;
+  padding: 0;
+}
+
+.portfolio-lead-item {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.portfolio-lead-item:last-child {
+  border-bottom: none;
+}
+
+.portfolio-lead-item .lead-info p {
+  margin: 5px 0;
+}

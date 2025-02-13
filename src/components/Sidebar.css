@@ -1,0 +1,110 @@
+.sidebar {
+  width: 260px; /* Largura inicial do sidebar */
+  background-color: #30475E;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: width 0.3s ease; /* Transição suave para a largura */
+  position: relative; /* Para posicionar o botão de toggle */
+}
+
+.sidebar.collapsed {
+  width: 80px; /* Largura do sidebar quando recolhido */
+}
+
+.logo {
+  padding: 25px;
+  text-align: center;
+  font-size: 1.7em;
+  font-weight: bold;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: #F05454;
+  white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+}
+
+.sidebar.collapsed .logo {
+    font-size: 1em; /* Ajuste o tamanho da fonte para o estado colapsado */
+    padding: 15px; /* Ajuste o padding */
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin-top: 25px;
+}
+
+.menu-item {
+  padding: 15px 25px;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar.collapsed .menu-item {
+    padding: 15px; /* Ajuste o padding para o estado colapsado */
+    text-align: center;
+}
+
+.menu-item a {
+  display: flex; /* Para alinhar ícone e texto */
+  align-items: center; /* Alinha verticalmente */
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: color 0.2s ease;
+  white-space: nowrap; /* Impede que o texto quebre */
+}
+
+.menu-item a:hover {
+  color: #F05454;
+}
+
+.menu-item:hover {
+  background-color: #3A6073;
+}
+
+.menu-item.active {
+  background-color: #F05454;
+}
+
+.menu-item.active a {
+  color: #fff;
+  font-weight: bold;
+}
+
+.menu-icon {
+  margin-right: 15px; /* Espaçamento entre ícone e texto */
+  width: 20px; /* Largura fixa para os ícones */
+  text-align: center; /* Centraliza o ícone */
+}
+
+.sidebar.collapsed .menu-icon {
+    margin-right: 0; /* Remove o espaçamento quando o sidebar está colapsado */
+}
+
+.sidebar.collapsed .menu-item a span:not(.menu-icon) {
+    display: none; /* Oculta o texto quando o sidebar está colapsado */
+}
+
+/* Botão para recolher/expandir o sidebar */
+.toggle-button {
+    position: absolute; /* Posiciona o botão */
+    top: 20px;
+    right: -20px; /* Posiciona o botão para fora do sidebar */
+    background-color: #F05454;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 0 10px 10px 0; /* Arredonda apenas os cantos direitos */
+    cursor: pointer;
+    z-index: 10; /* Garante que o botão fique acima do conteúdo */
+    transition: background-color 0.3s ease, right 0.3s ease; /* Transição suave */
+}
+
+.toggle-button:hover {
+    background-color: #E03A3A;
+}
+
+.sidebar.collapsed .toggle-button {
+    right: 0; /* Move o botão para dentro quando o sidebar está colapsado */
+}

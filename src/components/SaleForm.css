@@ -1,0 +1,69 @@
+.sale-form-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  border: 1px solid #eee;
+}
+
+.sale-form-container h2 {
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: #30475E;
+  font-size: 2em;
+  text-align: center;
+}
+
+.sale-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #30475E;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+  color: #333;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #F05454;
+  box-shadow: 0 0 0 2px rgba(240, 84, 84, 0.2);
+  outline: none;
+}
+
+.submit-button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #F05454;
+  color: white;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+}
+
+.submit-button:hover {
+  background-color: #E03A3A;
+}

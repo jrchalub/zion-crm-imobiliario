@@ -1,0 +1,173 @@
+.properties-page-content {
+  padding: 30px;
+}
+
+.properties-page-content h2 {
+  color: #30475E;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.properties-page-content p {
+  color: #555;
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Abas/Tabs */
+.property-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #555;
+  border-bottom: 2px solid transparent; /* Linha inferior para indicar aba ativa */
+  transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+.tab-button.active,
+.tab-button:hover {
+  color: #007bff;
+  border-bottom-color: #007bff;
+}
+
+/* Container do formulário */
+.property-form-wrapper {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+  margin-bottom: 30px;
+  border: none;
+}
+
+/* Placeholder para a seção de fotos */
+.property-photos-placeholder {
+  text-align: center;
+  padding: 50px;
+  border: 2px dashed #ddd;
+  border-radius: 10px;
+  color: #777;
+}
+
+.properties-section {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eee;
+  margin-top: 30px;
+}
+
+.properties-section h3 {
+  color: #30475E;
+  font-size: 1.8em;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Estilos para os filtros */
+.property-filters {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os filtros quebrem para a próxima linha */
+    gap: 15px; /* Espaçamento entre os filtros */
+    margin-bottom: 25px;
+    justify-content: flex-start; /* Alinhar os filtros à esquerda */
+    align-items: center;
+}
+
+.property-filters input[type="text"],
+.property-filters input[type="number"],
+.property-filters select {
+    padding: 10px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 1em;
+    color: #495057;
+    background-color: #f8f9fa;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.property-filters input[type="text"]:focus,
+.property-filters input[type="number"]:focus,
+.property-filters select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    background-color: #fff;
+}
+
+.property-filters select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position-x: 98%;
+    background-position-y: center;
+    padding-right: 30px;
+}
+
+/* Estilos para a lista de imóveis */
+.property-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Cards responsivos */
+    gap: 25px;
+}
+
+.property-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    border: 1px solid #eee;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.property-image-placeholder {
+    width: 100%;
+    height: 200px; /* Altura fixa para o placeholder da imagem */
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #777;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.property-details {
+    /* Estilos para os detalhes do imóvel */
+}
+
+.property-details h4 {
+    color: #30475E;
+    font-size: 1.4em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.property-details p {
+    color: #555;
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.property-details p strong {
+    color: #333;
+}

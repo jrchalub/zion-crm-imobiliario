@@ -1,0 +1,86 @@
+.integrations-page-content {
+  padding: 30px;
+}
+
+.integrations-page-content h2 {
+  color: #30475E;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.integrations-page-content p {
+  color: #555;
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.integrations-section {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eee;
+  margin-bottom: 25px; /* Espaçamento entre as seções de integração */
+}
+
+.integrations-section h3 {
+  color: #30475E;
+  font-size: 1.8em;
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.integration-status {
+  font-size: 1em;
+  color: #777;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.integration-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff; /* Cor primária para botões de integração */
+  color: white;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+  display: block; /* Botão ocupa a largura total */
+  margin: 0 auto; /* Centraliza o botão */
+  width: fit-content; /* Ajusta a largura ao conteúdo */
+}
+
+.integration-button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos específicos para a seção de Webhooks */
+.webhook-input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.webhook-input-group label {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.webhook-input-group input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+  color: #333;
+}
+
+.webhook-input-group input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}

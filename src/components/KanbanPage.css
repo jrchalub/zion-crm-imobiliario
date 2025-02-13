@@ -1,0 +1,175 @@
+.kanban-page-content {
+  padding: 30px;
+}
+
+.kanban-page-content h2 {
+  color: #30475E;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.kanban-page-content p {
+  color: #555;
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.kanban-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+.kanban-filters {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.sector-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sector-filter label {
+  font-weight: bold;
+  color: #343a40;
+}
+
+.sector-filter select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ced4da;
+  font-size: 1em;
+  color: #495057;
+  background-color: #fff;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: center;
+  padding-right: 25px;
+}
+
+.sector-filter select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.add-lead-button,
+.import-lead-button,
+.download-template-button { /* Style for all action buttons */
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for shadow */
+  margin-left: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Consistent shadow */
+}
+
+.add-lead-button:hover,
+.import-lead-button:hover,
+.download-template-button:hover { /* Hover effect for all action buttons */
+  background-color: #218838;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.import-lead-button {
+  background-color: #007bff;
+}
+
+.import-lead-button:hover {
+  background-color: #0056b3;
+}
+
+.download-template-button {
+  background-color: #6c757d; /* Grey color for template button */
+}
+
+.download-template-button:hover {
+  background-color: #5a6268; /* Darker grey on hover */
+}
+
+
+.add-lead-modal-overlay,
+.import-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.add-lead-modal-content,
+.import-modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 600px;
+}
+
+.add-lead-modal-content h3,
+.import-modal-content h3 {
+  color: #30475E;
+  font-size: 2em;
+  margin-top: 0;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.close-add-lead-modal-button,
+.close-import-modal-button,
+.import-modal-buttons button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for shadow */
+  margin-top: 20px;
+  margin-right: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Consistent shadow */
+}
+
+.close-add-lead-modal-button:hover,
+.close-import-modal-button:hover,
+.import-modal-buttons button:hover {
+  background-color: #c82333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.import-modal-buttons {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.import-modal-buttons button {
+    background-color: #007bff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Consistent shadow */
+}
+
+.import-modal-buttons button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}

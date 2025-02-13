@@ -1,0 +1,122 @@
+.kanban-column {
+  background-color: #e9e9ef;
+  border-radius: 15px;
+  padding: 25px;
+  width: 330px;
+  min-width: 330px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  border: 1px solid #d9d9d9;
+}
+
+.kanban-column h3 {
+  margin-top: 0;
+  margin-bottom: 28px;
+  color: #3a3a3a;
+  text-align: center;
+  font-size: 1.6em;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.kanban-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  border-left-width: 6px;
+  border-left-style: solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centralizar itens horizontalmente */
+  text-align: center; /* Centralizar texto */
+}
+
+.kanban-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.kanban-card-icons {
+  display: flex;
+  justify-content: center; /* Centralizar ícones horizontalmente */
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  width: 100%;
+}
+
+.kanban-card-icon, .seller-icon, .no-seller-icon, .source-icon, .type-icon {
+  font-size: 1.4em;
+  opacity: 0.85;
+}
+
+.kanban-card-content {
+  width: 100%;
+}
+
+.kanban-card p {
+  margin: 6px 0;
+  font-size: 1em;
+  color: #6a6a6a;
+  line-height: 1.5;
+}
+
+.kanban-card .lead-name {
+    font-size: 1.15em;
+    font-weight: 600;
+    color: #3a3a3a;
+    margin-bottom: 6px;
+}
+
+.kanban-card .lead-value {
+    font-weight: 600;
+    color: #008080;
+}
+
+.open-ticket-button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #778ca3;
+  color: white;
+  cursor: pointer;
+  font-size: 0.95em;
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+  margin-top: 12px;
+  align-self: center; /* Centralizar botão horizontalmente */
+}
+
+.open-ticket-button:hover {
+  background-color: #5e6e7c;
+  transform: scale(1.03);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.empty-column {
+  text-align: center;
+  color: #999;
+  padding: 20px;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  font-style: italic;
+  background-color: #fdfdfd;
+}
+
+/* Cores de status da borda esquerda (inalterado) */
+.kanban-card.novo_lead { border-left-color: #ffc857; }
+.kanban-card.contato_realizado { border-left-color: #5bc0de; }
+.kanban-card.proposta_enviada { border-left-color: #5cb85c; }
+.kanban-card.negociacao { border-left-color: #428bca; }
+.kanban-card.fechamento { border-left-color: #d9534f; background-color: #f9f0f0; }
+
+/* Cores de fundo dos cards por status (inalterado) */
+.kanban-card.novo_lead { background-color: #fffaf0; }
+.kanban-card.contato_realizado { background-color: #f0ffff; }
+.kanban-card.proposta_enviada { background-color: #f0fff0; }
+.kanban-card.negociacao { background-color: #f0f8ff; }
+.kanban-card.fechamento { background-color: #ffebee; }

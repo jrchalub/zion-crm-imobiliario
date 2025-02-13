@@ -1,0 +1,252 @@
+.dashboard-content {
+  flex-grow: 1;
+  padding: 30px;
+  background-color: #f0f2f7; /* Cor de fundo ligeiramente mais escura que antes */
+  font-family: 'Nunito', sans-serif; /* Fonte moderna e limpa */
+  color: #333;
+}
+
+/* Estilos para o Header do Dashboard */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 25px; /* Aumentando padding bottom */
+  border-bottom: 2px solid #e0e0e0; /* Linha divisória mais destacada */
+}
+
+.date-range {
+  display: flex;
+  align-items: center;
+}
+
+.current-date {
+  font-size: 1.1em; /* Aumentando tamanho da fonte da data */
+  color: #555;
+  margin-right: 20px;
+  font-weight: 500; /* Peso da fonte da data */
+}
+
+.date-button {
+  background-color: #fff; /* Fundo branco para os botões de data */
+  border: 1px solid #ddd;
+  border-radius: 20px; /* Mais arredondado para os botões de data */
+  padding: 8px 20px; /* Padding horizontal maior nos botões de data */
+  margin-left: 8px;
+  color: #555;
+  cursor: pointer;
+  font-size: 0.95em; /* Tamanho da fonte dos botões de data ligeiramente maior */
+  font-weight: 500; /* Peso da fonte dos botões de data */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08); /* Adicionando sombra suave aos botões de data */
+}
+
+.date-button.active,
+.date-button:hover {
+  background-color: #3867d6; /* Cor primária mais vibrante para botões ativos/hover */
+  color: white;
+  border-color: #3867d6;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.refresh-button {
+  background-color: #fff; /* Fundo branco para o botão de refresh */
+  border: none;
+  color: #777;
+  cursor: pointer;
+  padding: 10px 15px; /* Padding horizontal maior para o botão de refresh */
+  border-radius: 25px; /* Mais arredondado para o botão de refresh */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.refresh-button:hover {
+  background-color: #e9ecef;
+  color: #333;
+}
+
+/* Dashboard Title */
+.dashboard-content h1 {
+  margin-top: 0;
+  color: #333;
+  font-size: 2.8em; /* Aumentando ainda mais o tamanho do título principal */
+  margin-bottom: 35px; /* Mais margem inferior para o título principal */
+  text-align: left;
+  font-weight: 700; /* Título ainda mais forte */
+  letter-spacing: -1px; /* Espaçamento negativo para títulos grandes */
+}
+
+/* Grid de Cards */
+.dashboard-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin-bottom: 40px; /* Mais margem inferior para a grade de cards */
+}
+
+/* Estilo Base dos Cards */
+.dashboard-card {
+  background-color: #fff;
+  color: #fff;
+  border-radius: 15px; /* Mais arredondado para os cards */
+  padding: 30px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07); /* Sombra mais pronunciada e elegante */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: none;
+  transition: transform 0.2s ease-in-out; /* Transição suave no hover */
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px); /* Efeito de elevação no hover */
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.09); /* Sombra mais intensa no hover */
+}
+
+
+.card-title {
+  font-size: 1.1em;
+  font-weight: 600; /* Título do card mais forte */
+  margin-top: 0;
+  margin-bottom: 12px; /* Mais margem inferior para o título do card */
+  text-align: left;
+  color: rgba(255, 255, 255, 0.95); /* Cor do título do card mais clara */
+  opacity: 1;
+  letter-spacing: 0.6px;
+}
+
+.card-value {
+  font-size: 3.2em; /* Valor do card ainda maior e mais destacado */
+  font-weight: 800; /* Valor do card ainda mais negrito */
+  text-align: left;
+  color: white;
+  line-height: 1;
+  margin-bottom: 15px; /* Mais margem inferior para o valor do card */
+  letter-spacing: -1.5px; /* Espaçamento negativo para valores grandes */
+}
+
+.card-percentage {
+  font-size: 0.9em;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500; /* Peso da fonte da porcentagem */
+}
+
+.card-percentage.up {
+  color: #2ecc71;
+}
+
+.card-percentage.down {
+  color: #e74c3c;
+}
+
+.percentage-arrow {
+  margin-left: 6px; /* Mais margem esquerda para a seta da porcentagem */
+  font-size: 1em;
+}
+
+.card-description {
+  font-size: 0.95em; /* Tamanho da fonte da descrição ligeiramente maior */
+  color: rgba(255, 255, 255, 0.75); /* Cor da descrição do card mais clara */
+  text-align: left;
+  margin-bottom: 0;
+  line-height: 1.6; /* Linha de altura ligeiramente maior para a descrição */
+}
+
+/* Estilos para a linha de ranking de vendedores */
+.dashboard-ranking-row {
+  margin-bottom: 45px; /* Mais margem inferior para a linha de ranking */
+}
+
+.ranking-card {
+  background-color: #fff;
+  border-radius: 15px; /* Mais arredondado para o card de ranking */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07); /* Sombra mais pronunciada e elegante */
+  border: none;
+  padding: 35px; /* Padding interno maior no card de ranking */
+}
+
+.ranking-card h3 {
+  color: #333; /* Cor do título do ranking mais escura */
+  font-size: 1.9em; /* Tamanho do título do ranking ligeiramente maior */
+  margin-top: 0;
+  margin-bottom: 25px;
+  text-align: left; /* Alinhando título do ranking à esquerda */
+  font-weight: 700; /* Título do ranking mais forte */
+}
+
+.ranking-list {
+  list-style-type: decimal;
+  padding-left: 35px; /* Mais padding esquerdo para a lista de ranking */
+}
+
+.ranking-list li {
+  padding: 15px 0; /* Mais padding vertical nos itens da lista de ranking */
+  border-bottom: 1px solid #f0f0f0; /* Separador ainda mais claro nos itens da lista de ranking */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1em; /* Tamanho da fonte da lista de ranking ligeiramente maior */
+}
+
+.ranking-list li:last-child {
+  border-bottom: none;
+}
+
+.seller-name {
+  font-weight: 600;
+  color: #444; /* Nome do vendedor mais escuro e forte */
+}
+
+.seller-sales {
+  color: #777;
+  font-size: 0.95em; /* Tamanho da fonte do número de vendas ligeiramente maior */
+}
+
+
+/* Estilos para a linha de integração (inalterados) */
+.dashboard-integration-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.powerbi-integration,
+.interactive-charts {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.powerbi-integration h3,
+.interactive-charts h3 {
+  color: #333;
+  font-size: 1.4em;
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.integration-placeholder,
+.charts-placeholder {
+  height: 300px;
+  background-color: #eee;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #777;
+  font-style: italic;
+  text-align: center;
+  padding: 20px;
+  line-height: 1.4;
+}

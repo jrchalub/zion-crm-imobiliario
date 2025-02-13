@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif; /* Aplicando a fonte Nunito */
+  background-color: #f0f2f5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  display: flex;
+}
+
+.dashboard-container {
+  display: flex;
+  width: 100%; /* Ocupa toda a largura */
+}
+
+.content-area {
+    flex-grow: 1;
+    transition: margin-left 0.3s ease; /* Transição suave para a margem */
+}
+
+.content-area.expanded {
+    margin-left: 0px; /* Ajuste a margem quando o sidebar estiver recolhido */
+}

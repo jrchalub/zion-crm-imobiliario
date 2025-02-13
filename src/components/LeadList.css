@@ -1,0 +1,4 @@
+/* Removendo estilos de LeadList já que KanbanBoard será usado */
+.lead-list-container {
+  display: none;
+}
